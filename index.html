@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla periodica</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+    <div class="caja">
+        <div class="info">
+            <h3 class="info-nombre">Nombre elemento</h3>
+            <div class="flex">
+                <div class="caja1">
+                    <h4 class="simbolo">sibolo</h4>
+                </div>
+                <div class="caja2">
+                    <p class="n-atomico">Número atómico: 4</p>
+                    <p class="m-atomica">Masa atómica: 454545.67</p>
+                    <p class="serie">Serie química: 354537s</p>
+                </div>
+            </div>
+            <button class="btn-cerrar">X</button>
+        </div>
+    </div>
+
+
+    <div class="grid-container">
+        <div class="elemento elemento-1 no-metal" onclick="mostrarInfo(valor=1)">
+            <h2 class="numero-atomico" value=1>1</h2>
+            <h2>H</h2>
+            <p class="nombre-elemento">Hidrógeno</p>
+        </div>
+        <div class="elemento elemento-2 gases-nobles" onclick="mostrarInfo(valor=2)">
+            <h2 class="numero-atomico">2</h2>
+            <h2>He</h2>
+            <p class="nombre-elemento">Helio</p>
+        </div>
+        <div class="elemento elemento-3 metal-alcalino" onclick="mostrarInfo(valor=3)">
+            <h2 class="numero-atomico">3</h2>
+            <h2>Li</h2>
+            <p class="nombre-elemento">Litio</p>
+        </div>
+        <div class="elemento elemento-4 alcalinoterreos" onclick="mostrarInfo(valor=4)">
+            <h2 class="numero-atomico">4</h2>
+            <h2>Be</h2>
+            <p class="nombre-elemento">Berilio</p>
+        </div>
+        <div class="elemento elemento-5 metaloides" onclick="mostrarInfo(valor=5)">
+            <h2 class="numero-atomico">5</h2>
+            <h2>B</h2>
+            <p class="nombre-elemento">Boro</p>
+        </div>
+        <div class="elemento elemento-6 no-metal" onclick="mostrarInfo(valor=6)">
+            <h2 class="numero-atomico">6</h2>
+            <h2>C</h2>
+            <p class="nombre-elemento">Carbono</p>
+        </div>
+        <div class="elemento elemento-7 no-metal" onclick="mostrarInfo(valor=7)">
+            <h2 class="numero-atomico">7</h2>
+            <h2>N</h2>
+            <p class="nombre-elemento">Nitrógeno</p>
+        </div>
+        <div class="elemento elemento-8 no-metal" onclick="mostrarInfo(valor=8)">
+            <h2 class="numero-atomico">8</h2>
+            <h2>O</h2>
+            <p class="nombre-elemento">Oxígeno</p>
+        </div>
+        <div class="elemento elemento-9 halogenos" onclick="mostrarInfo(valor=9)">
+            <h2 class="numero-atomico">9</h2>
+            <h2>F</h2>
+            <p class="nombre-elemento">Flúor</p>
+        </div>
+        <div class="elemento elemento-10 gases-nobles" onclick="mostrarInfo(valor=10)">
+            <h2 class="numero-atomico">10</h2>
+            <h2>Ne</h2>
+            <p class="nombre-elemento">Neón</p>
+        </div>
+        <div class="elemento elemento-11 metal-alcalino" onclick="mostrarInfo(valor=11)">
+            <h2 class="numero-atomico">11</h2>
+            <h2>Na</h2>
+            <p class="nombre-elemento">Sodio</p>
+        </div>
+        <div class="elemento elemento-12 alcalinoterreos" onclick="mostrarInfo(valor=12)">
+            <h2 class="numero-atomico">12</h2>
+            <h2>Mg</h2>
+            <p class="nombre-elemento">Magnesio</p>
+        </div>
+        <div class="elemento elemento-13 otros-metales" onclick="mostrarInfo(valor=13)">
+            <h2 class="numero-atomico">13</h2>
+            <h2>Al</h2>
+            <p class="nombre-elemento">Aluminio</p>
+        </div>
+        <div class="elemento elemento-14 metaloides" onclick="mostrarInfo(valor=14)">
+            <h2 class="numero-atomico">14</h2>
+            <h2>Si</h2>
+            <p class="nombre-elemento">Silicio</p>
+        </div>
+        <div class="elemento elemento-15 no-metal" onclick="mostrarInfo(valor=15)">
+            <h2 class="numero-atomico">15</h2>
+            <h2>P</h2>
+            <p class="nombre-elemento">Fósforo</p>
+        </div>
+        <div class="elemento elemento-16 no-metal" onclick="mostrarInfo(valor=16)">
+            <h2 class="numero-atomico">16</h2>
+            <h2>S</h2>
+            <p class="nombre-elemento">Azufre</p>
+        </div>
+        <div class="elemento elemento-17 halogenos" onclick="mostrarInfo(valor=17)">
+            <h2 class="numero-atomico">17</h2>
+            <h2>Cl</h2>
+            <p class="nombre-elemento">Cloro</p>
+        </div>
+        <div class="elemento elemento-18 gases-nobles" onclick="mostrarInfo(valor=18)">
+            <h2 class="numero-atomico">18</h2>
+            <h2>Ar</h2>
+            <p class="nombre-elemento">Argón</p>
+        </div>
+        <div class="elemento elemento-19 metal-alcalino" onclick="mostrarInfo(valor=19)">
+            <h2 class="numero-atomico">19</h2>
+            <h2>K</h2>
+            <p class="nombre-elemento">Potasio</p>
+        </div>
+        <div class="elemento elemento-20 alcalinoterreos" onclick="mostrarInfo(valor=20)">
+            <h2 class="numero-atomico">20</h2>
+            <h2>Ca</h2>
+            <p class="nombre-elemento">Calcio</p>
+        </div>
+        <div class="elemento elemento-21 metalTransicion" onclick="mostrarInfo(valor=21)">
+            <h2 class="numero-atomico">21</h2>
+            <h2>Sc</h2>
+            <p class="nombre-elemento">Escandio</p>
+        </div>
+        <div class="elemento elemento-22 metalTransicion" onclick="mostrarInfo(valor=22)">
+            <h2 class="numero-atomico">22</h2>
+            <h2>Ti</h2>
+            <p class="nombre-elemento">Titanio</p>
+        </div>
+        <div class="elemento elemento-23 metalTransicion" onclick="mostrarInfo(valor=23)">
+            <h2 class="numero-atomico">23</h2>
+            <h2>V</h2>
+            <p class="nombre-elemento">Vanadio</p>
+        </div>
+        <div class="elemento elemento-24 metalTransicion" onclick="mostrarInfo(valor=24)">
+            <h2 class="numero-atomico">24</h2>
+            <h2>Cr</h2>
+            <p class="nombre-elemento">Cromo</p>
+        </div>
+        <div class="elemento elemento-25 metalTransicion" onclick="mostrarInfo(valor=25)">
+            <h2 class="numero-atomico">25</h2>
+            <h2>Mn</h2>
+            <p class="nombre-elemento">Manganeso</p>
+        </div>
+        <div class="elemento elemento-26 metalTransicion" onclick="mostrarInfo(valor=26)">
+            <h2 class="numero-atomico">26</h2>
+            <h2>Fe</h2>
+            <p class="nombre-elemento">Hierro</p>
+        </div>
+        <div class="elemento elemento-27 metalTransicion" onclick="mostrarInfo(valor=27)">
+            <h2 class="numero-atomico">27</h2>
+            <h2>Co</h2>
+            <p class="nombre-elemento">Cobalto</p>
+        </div>
+        <div class="elemento elemento-28 metalTransicion" onclick="mostrarInfo(valor=28)">
+            <h2 class="numero-atomico">28</h2>
+            <h2>Ni</h2>
+            <p class="nombre-elemento">Niquel</p>
+        </div>
+        <div class="elemento elemento-29 metalTransicion" onclick="mostrarInfo(valor=29)">
+            <h2 class="numero-atomico">29</h2>
+            <h2>Cu</h2>
+            <p class="nombre-elemento">Cobre</p>
+        </div>
+        <div class="elemento elemento-30 metalTransicion" onclick="mostrarInfo(valor=30)">
+            <h2 class="numero-atomico">30</h2>
+            <h2>Zn</h2>
+            <p class="nombre-elemento">Zinc</p>
+        </div>
+        <div class="elemento elemento-31 otros-metales" onclick="mostrarInfo(valor=31)">
+            <h2 class="numero-atomico">31</h2>
+            <h2>Ga</h2>
+            <p class="nombre-elemento">Galio</p>
+        </div>
+        <div class="elemento elemento-32 metaloides" onclick="mostrarInfo(valor=32)">
+            <h2 class="numero-atomico">32</h2>
+            <h2>Ge</h2>
+            <p class="nombre-elemento">Germanio</p>
+        </div>
+        <div class="elemento elemento-33 metaloides" onclick="mostrarInfo(valor=33)">
+            <h2 class="numero-atomico">33</h2>
+            <h2>As</h2>
+            <p class="nombre-elemento">Arsénico</p>
+        </div>
+        <div class="elemento elemento-34 no-metal" onclick="mostrarInfo(valor=34)">
+            <h2 class="numero-atomico">34</h2>
+            <h2>Se</h2>
+            <p class="nombre-elemento">Selenio</p>
+        </div>
+        <div class="elemento elemento-35 halogenos" onclick="mostrarInfo(valor=35)">
+            <h2 class="numero-atomico">35</h2>
+            <h2>Br</h2>
+            <p class="nombre-elemento">Bromo</p>
+        </div>
+        <div class="elemento elemento-36 gases-nobles" onclick="mostrarInfo(valor=36)">
+            <h2 class="numero-atomico">36</h2>
+            <h2>Kr</h2>
+            <p class="nombre-elemento">Kriptón</p>
+        </div>
+        <div class="elemento elemento-37 metal-alcalino" onclick="mostrarInfo(valor=37)">
+            <h2 class="numero-atomico">37</h2>
+            <h2>Rb</h2>
+            <p class="nombre-elemento">Rubidio</p>
+        </div>
+        <div class="elemento elemento-38 alcalinoterreos" onclick="mostrarInfo(valor=38)">
+            <h2 class="numero-atomico">38</h2>
+            <h2>Sr</h2>
+            <p class="nombre-elemento">Estroncio</p>
+        </div>
+        <div class="elemento elemento-39 metalTransicion" onclick="mostrarInfo(valor=39)">
+            <h2 class="numero-atomico">39</h2>
+            <h2>Y</h2>
+            <p class="nombre-elemento">Itryo</p>
+        </div>
+        <div class="elemento elemento-40 metalTransicion" onclick="mostrarInfo(valor=40)">
+            <h2 class="numero-atomico">40</h2>
+            <h2>Zr</h2>
+            <p class="nombre-elemento">Zirconio</p>
+        </div>
+        <div class="elemento elemento-41 metalTransicion" onclick="mostrarInfo(valor=41)">
+            <h2 class="numero-atomico">41</h2>
+            <h2>Nb</h2>
+            <p class="nombre-elemento">Niobio</p>
+        </div>
+        <div class="elemento elemento-42 metalTransicion" onclick="mostrarInfo(valor=42)">
+            <h2 class="numero-atomico">42</h2>
+            <h2>Mo</h2>
+            <p class="nombre-elemento">Molibdeno</p>
+        </div>
+        <div class="elemento elemento-43 metalTransicion" onclick="mostrarInfo(valor=43)">
+            <h2 class="numero-atomico">43</h2>
+            <h2>Tc</h2>
+            <p class="nombre-elemento">Tecnecio</p>
+        </div>
+        <div class="elemento elemento-44 metalTransicion" onclick="mostrarInfo(valor=44)">
+            <h2 class="numero-atomico">44</h2>
+            <h2>Ru</h2>
+            <p class="nombre-elemento">Rutenio</p>
+        </div>
+        <div class="elemento elemento-45 metalTransicion" onclick="mostrarInfo(valor=45)">
+            <h2 class="numero-atomico">45</h2>
+            <h2>Rh</h2>
+            <p class="nombre-elemento">Rodio</p>
+        </div>
+        <div class="elemento elemento-46 metalTransicion" onclick="mostrarInfo(valor=46)">
+            <h2 class="numero-atomico">46</h2>
+            <h2>Pd</h2>
+            <p class="nombre-elemento">Paladio</p>
+        </div>
+        <div class="elemento elemento-47 metalTransicion" onclick="mostrarInfo(valor=47)">
+            <h2 class="numero-atomico">47</h2>
+            <h2>Ag</h2>
+            <p class="nombre-elemento">Plata</p>
+        </div>
+        <div class="elemento elemento-48 metalTransicion" onclick="mostrarInfo(valor=48)">
+            <h2 class="numero-atomico">48</h2>
+            <h2>Cd</h2>
+            <p class="nombre-elemento">Cadmio</p>
+        </div>
+        <div class="elemento elemento-49 otros-metales" onclick="mostrarInfo(valor=49)">
+            <h2 class="numero-atomico">49</h2>
+            <h2>In</h2>
+            <p class="nombre-elemento">Indio</p>
+        </div>
+        <div class="elemento elemento-50 otros-metales" onclick="mostrarInfo(valor=50)">
+            <h2 class="numero-atomico">50</h2>
+            <h2>Sn</h2>
+            <p class="nombre-elemento">Estaño</p>
+        </div>
+        <div class="elemento elemento-51 metaloides" onclick="mostrarInfo(valor=51)">
+            <h2 class="numero-atomico">51</h2>
+            <h2>Sb</h2>
+            <p class="nombre-elemento">Antimonio</p>
+        </div>
+        <div class="elemento elemento-52 metaloides" onclick="mostrarInfo(valor=52)">
+            <h2 class="numero-atomico">52</h2>
+            <h2>Te</h2>
+            <p class="nombre-elemento">Telurio</p>
+        </div>
+        <div class="elemento elemento-53 halogenos" onclick="mostrarInfo(valor=53)">
+            <h2 class="numero-atomico">53</h2>
+            <h2>I</h2>
+            <p class="nombre-elemento">Yodo</p>
+        </div>
+        <div class="elemento elemento-54 gases-nobles" onclick="mostrarInfo(valor=54)">
+            <h2 class="numero-atomico">54</h2>
+            <h2>Xe</h2>
+            <p class="nombre-elemento">Xenón</p>
+        </div>
+        <div class="elemento elemento-55 metal-alcalino" onclick="mostrarInfo(valor=55)">
+            <h2 class="numero-atomico">55</h2>
+            <h2>Cs</h2>
+            <p class="nombre-elemento">Cesio</p>
+        </div>
+        <div class="elemento elemento-56 alcalinoterreos" onclick="mostrarInfo(valor=56)">
+            <h2 class="numero-atomico">56</h2>
+            <h2>Ba</h2>
+            <p class="nombre-elemento">Bario</p>
+        </div>
+        <div class="elemento elemento-71 metalTransicion" onclick="mostrarInfo(valor=71)">
+            <h2 class="numero-atomico">71</h2>
+            <h2>Lu</h2>
+            <p class="nombre-elemento">Lutecio</p>
+        </div>
+        <div class="elemento elemento-72 metalTransicion" onclick="mostrarInfo(valor=72)">
+            <h2 class="numero-atomico">72</h2>
+            <h2>Hf</h2>
+            <p class="nombre-elemento">Hafnio</p>
+        </div>
+        <div class="elemento elemento-73 metalTransicion" onclick="mostrarInfo(valor=73)">
+            <h2 class="numero-atomico">73</h2>
+            <h2>Ta</h2>
+            <p class="nombre-elemento">Tantalio</p>
+        </div>
+        <div class="elemento elemento-74 metalTransicion" onclick="mostrarInfo(valor=74)">
+            <h2 class="numero-atomico">74</h2>
+            <h2>W</h2>
+            <p class="nombre-elemento">Wolframio</p>
+        </div>
+        <div class="elemento elemento-75 metalTransicion" onclick="mostrarInfo(valor=75)">
+            <h2 class="numero-atomico">75</h2>
+            <h2>Re</h2>
+            <p class="nombre-elemento">Remio</p>
+        </div>
+        <div class="elemento elemento-76 metalTransicion" onclick="mostrarInfo(valor=76)">
+            <h2 class="numero-atomico">76</h2>
+            <h2>Os</h2>
+            <p class="nombre-elemento">Osmio</p>
+        </div>
+        <div class="elemento elemento-77 metalTransicion" onclick="mostrarInfo(valor=77)">
+            <h2 class="numero-atomico">77</h2>
+            <h2>Ir</h2>
+            <p class="nombre-elemento">Iridio</p>
+        </div>
+        <div class="elemento elemento-78 metalTransicion" onclick="mostrarInfo(valor=78)">
+            <h2 class="numero-atomico">78</h2>
+            <h2>Pt</h2>
+            <p class="nombre-elemento">Platino</p>
+        </div>
+        <div class="elemento elemento-79 metalTransicion" onclick="mostrarInfo(valor=79)">
+            <h2 class="numero-atomico">79</h2>
+            <h2>Au</h2>
+            <p class="nombre-elemento">Oro</p>
+        </div>
+        <div class="elemento elemento-80 metalTransicion" onclick="mostrarInfo(valor=80)">
+            <h2 class="numero-atomico">80</h2>
+            <h2>Hg</h2>
+            <p class="nombre-elemento">Mercurio</p>
+        </div>
+        <div class="elemento elemento-81 otros-metales" onclick="mostrarInfo(valor=81)">
+            <h2 class="numero-atomico">81</h2>
+            <h2>Tl</h2>
+            <p class="nombre-elemento">Talio</p>
+        </div>
+        <div class="elemento elemento-82 otros-metales" onclick="mostrarInfo(valor=82)">
+            <h2 class="numero-atomico">82</h2>
+            <h2>Pb</h2>
+            <p class="nombre-elemento">Plomo</p>
+        </div>
+        <div class="elemento elemento-83 otros-metales" onclick="mostrarInfo(valor=83)">
+            <h2 class="numero-atomico">83</h2>
+            <h2>Bi</h2>
+            <p class="nombre-elemento">Bismuto</p>
+        </div>
+        <div class="elemento elemento-84 metaloides" onclick="mostrarInfo(valor=84)">
+            <h2 class="numero-atomico">84</h2>
+            <h2>Po</h2>
+            <p class="nombre-elemento">Polonio</p>
+        </div>
+        <div class="elemento elemento-85 halogenos" onclick="mostrarInfo(valor=85)">
+            <h2 class="numero-atomico">85</h2>
+            <h2>At</h2>
+            <p class="nombre-elemento">Astato</p>
+        </div>
+        <div class="elemento elemento-86 gases-nobles" onclick="mostrarInfo(valor=86)">
+            <h2 class="numero-atomico">86</h2>
+            <h2>Rn</h2>
+            <p class="nombre-elemento">Radón</p>
+        </div>
+        <div class="elemento elemento-87 metal-alcalino" onclick="mostrarInfo(valor=87)">
+            <h2 class="numero-atomico">87</h2>
+            <h2>Fr</h2>
+            <p class="nombre-elemento">Francio</p>
+        </div>
+        <div class="elemento elemento-88 alcalinoterreos" onclick="mostrarInfo(valor=88)">
+            <h2 class="numero-atomico">88</h2>
+            <h2>Ra</h2>
+            <p class="nombre-elemento">Radio</p>
+        </div>
+        <div class="elemento elemento-103 metalTransicion" onclick="mostrarInfo(valor=103)">
+            <h2 class="numero-atomico">103</h2>
+            <h2>Lr</h2>
+            <p class="nombre-elemento">Laurencio</p>
+        </div>
+        <div class="elemento elemento-104 metalTransicion" onclick="mostrarInfo(valor=104)">
+            <h2 class="numero-atomico">104</h2>
+            <h2>Rf</h2>
+            <p class="nombre-elemento">Rutherfordio</p>
+        </div>
+        <div class="elemento elemento-105 metalTransicion" onclick="mostrarInfo(valor=105)">
+            <h2 class="numero-atomico">105</h2>
+            <h2>Db</h2>
+            <p class="nombre-elemento">Dubnio</p>
+        </div>
+        <div class="elemento elemento-106 metalTransicion" onclick="mostrarInfo(valor=106)">
+            <h2 class="numero-atomico">106</h2>
+            <h2>Sg</h2>
+            <p class="nombre-elemento">Seaborgio</p>
+        </div>
+        <div class="elemento elemento-107 metalTransicion" onclick="mostrarInfo(valor=107)">
+            <h2 class="numero-atomico">107</h2>
+            <h2>Bh</h2>
+            <p class="nombre-elemento">Bohrio</p>
+        </div>
+        <div class="elemento elemento-108 metalTransicion" onclick="mostrarInfo(valor=108)">
+            <h2 class="numero-atomico">108</h2>
+            <h2>Hs</h2>
+            <p class="nombre-elemento">Hassio</p>
+        </div>
+        <div class="elemento elemento-109 metalTransicion" onclick="mostrarInfo(valor=109)">
+            <h2 class="numero-atomico">109</h2>
+            <h2>Mt</h2>
+            <p class="nombre-elemento">Meitnerio</p>
+        </div>
+        <div class="elemento elemento-110 metalTransicion" onclick="mostrarInfo(valor=110)">
+            <h2 class="numero-atomico">110</h2>
+            <h2>Ds</h2>
+            <p class="nombre-elemento">Darmstatio</p>
+        </div>
+        <div class="elemento elemento-111 metalTransicion" onclick="mostrarInfo(valor=111)">
+            <h2 class="numero-atomico">111</h2>
+            <h2>Rg</h2>
+            <p class="nombre-elemento">Roentgenio</p>
+        </div>
+        <div class="elemento elemento-112 metalTransicion" onclick="mostrarInfo(valor=112)">
+            <h2 class="numero-atomico">112</h2>
+            <h2>Cn</h2>
+            <p class="nombre-elemento">Copernicio</p>
+        </div>
+        <div class="elemento elemento-113 otros-metales" onclick="mostrarInfo(valor=113)">
+            <h2 class="numero-atomico">113</h2>
+            <h2>Nh</h2>
+            <p class="nombre-elemento">Nihonio</p>
+        </div>
+        <div class="elemento elemento-114 otros-metales" onclick="mostrarInfo(valor=114)">
+            <h2 class="numero-atomico">114</h2>
+            <h2>Fl</h2>
+            <p class="nombre-elemento">Flerovio</p>
+        </div>
+        <div class="elemento elemento-115 otros-metales" onclick="mostrarInfo(valor=115)">
+            <h2 class="numero-atomico">115</h2>
+            <h2>Mc</h2>
+            <p class="nombre-elemento">Moscovio</p>
+        </div>
+        <div class="elemento elemento-116 otros-metales" onclick="mostrarInfo(valor=116)">
+            <h2 class="numero-atomico">116</h2>
+            <h2>Mc</h2>
+            <p class="nombre-elemento">Livermorio</p>
+        </div>
+        <div class="elemento elemento-117 halogenos" onclick="mostrarInfo(valor=117)">
+            <h2 class="numero-atomico">117</h2>
+            <h2>Mc</h2>
+            <p class="nombre-elemento">Teneso</p>
+        </div>
+        <div class="elemento elemento-118 gases-nobles" onclick="mostrarInfo(valor=118)">
+            <h2 class="numero-atomico">118</h2>
+            <h2>Og</h2>
+            <p class="nombre-elemento">Oganesón</p>
+        </div>
+
+        <div class="info-elementos">
+            <h3 class="no-metales">No metales</h3>
+            <h3 class="metales-alcalinos">Metales alcalinos</h3>
+            <h3 class="metales-alcalinoterreos">Metales alcalinoterreos</h3>
+            <h3 class="halogenoss">Halógenos</h3>
+            <h3 class="metales-transicion">Metales de transcición</h3>
+        </div>
+        <div class="info-elementos2">
+            <h3 class="metales-bloquep">Metales bloque p</h3>
+            <h3 class="metaloidess">Metaloides</h3>
+            <h3 class="gasesnobles">Gases nobles</h3>
+            <h3 class="lantanidos">Lantánidos</h3>
+            <h3 class="actinidos">Actínidos </h3>
+        </div>
+    </div>
+
+    <div class="grid-latin">
+        <div class="elemento elemento-57 lantanos" onclick="mostrarInfo(valor=57)">
+            <h2 class="numero-atomico" value=57>57</h2>
+            <h2>La</h2>
+            <p class="nombre-elemento">Lantano</p>
+        </div>
+        <div class="elemento elemento-58 lantanos" onclick="mostrarInfo(valor=58)">
+            <h2 class="numero-atomico" value=58>58</h2>
+            <h2>Ce</h2>
+            <p class="nombre-elemento">Cerio</p>
+        </div>
+        <div class="elemento elemento-59 lantanos" onclick="mostrarInfo(valor=59)">
+            <h2 class="numero-atomico" value=59>59</h2>
+            <h2>Pr</h2>
+            <p class="nombre-elemento">Prometio</p>
+        </div>
+        <div class="elemento elemento-60 lantanos" onclick="mostrarInfo(valor=60)">
+            <h2 class="numero-atomico" value=60>60</h2>
+            <h2>Nd</h2>
+            <p class="nombre-elemento">Neodimio </p>
+        </div>
+        <div class="elemento elemento-61 lantanos" onclick="mostrarInfo(valor=61)">
+            <h2 class="numero-atomico" value=61>61</h2>
+            <h2>Pm</h2>
+            <p class="nombre-elemento">Prometio </p>
+        </div>
+        <div class="elemento elemento-62 lantanos" onclick="mostrarInfo(valor=62)">
+            <h2 class="numero-atomico" value=62>62</h2>
+            <h2>Sm</h2>
+            <p class="nombre-elemento">Samario</p>
+        </div>
+        <div class="elemento elemento-63 lantanos" onclick="mostrarInfo(valor=63)">
+            <h2 class="numero-atomico" value=63>63</h2>
+            <h2>Eu</h2>
+            <p class="nombre-elemento">Europio</p>
+        </div>
+        <div class="elemento elemento-64 lantanos" onclick="mostrarInfo(valor=64)">
+            <h2 class="numero-atomico" value=64>64</h2>
+            <h2>Gd</h2>
+            <p class="nombre-elemento">Gadolinio</p>
+        </div>
+        <div class="elemento elemento-65 lantanos" onclick="mostrarInfo(valor=65)">
+            <h2 class="numero-atomico" value=65>65</h2>
+            <h2>Tb</h2>
+            <p class="nombre-elemento">Terbio</p>
+        </div>
+        <div class="elemento elemento-66 lantanos" onclick="mostrarInfo(valor=66)">
+            <h2 class="numero-atomico" value=66>66</h2>
+            <h2>Dy</h2>
+            <p class="nombre-elemento">Disprosio</p>
+        </div>
+        <div class="elemento elemento-67 lantanos" onclick="mostrarInfo(valor=67)">
+            <h2 class="numero-atomico" value=67>67</h2>
+            <h2>Ho</h2>
+            <p class="nombre-elemento">Holmio</p>
+        </div>
+        <div class="elemento elemento-68 lantanos" onclick="mostrarInfo(valor=68)">
+            <h2 class="numero-atomico" value=68>68</h2>
+            <h2>Er</h2>
+            <p class="nombre-elemento">Erbio</p>
+        </div>
+        <div class="elemento elemento-69 lantanos" onclick="mostrarInfo(valor=69)">
+            <h2 class="numero-atomico" value=69>69</h2>
+            <h2>Tm</h2>
+            <p class="nombre-elemento">Tulio</p>
+        </div>
+        <div class="elemento elemento-70 lantanos" onclick="mostrarInfo(valor=70)">
+            <h2 class="numero-atomico" value=70>70</h2>
+            <h2>Yb</h2>
+            <p class="nombre-elemento">Iterbio</p>
+        </div>
+        <div class="elemento elemento-89 actinido" onclick="mostrarInfo(valor=89)">
+            <h2 class="numero-atomico" value=89>89</h2>
+            <h2>Ac</h2>
+            <p class="nombre-elemento">Actinio</p>
+        </div>
+        <div class="elemento elemento-90 actinido" onclick="mostrarInfo(valor=90)">
+            <h2 class="numero-atomico" value=90>90</h2>
+            <h2>Th</h2>
+            <p class="nombre-elemento">Torio</p>
+        </div>
+        <div class="elemento elemento-91 actinido" onclick="mostrarInfo(valor=91)">
+            <h2 class="numero-atomico" value=91>91</h2>
+            <h2>Pa</h2>
+            <p class="nombre-elemento">Protac-<br>tinio</p>
+        </div>
+        <div class="elemento elemento-92 actinido" onclick="mostrarInfo(valor=92)">
+            <h2 class="numero-atomico" value=92>92</h2>
+            <h2>U</h2>
+            <p class="nombre-elemento">Uranio</p>
+        </div>
+        <div class="elemento elemento-93 actinido" onclick="mostrarInfo(valor=93)">
+            <h2 class="numero-atomico" value=93>93</h2>
+            <h2>Np</h2>
+            <p class="nombre-elemento">Neptunio</p>
+        </div>
+        <div class="elemento elemento-94 actinido" onclick="mostrarInfo(valor=94)">
+            <h2 class="numero-atomico" value=94>94</h2>
+            <h2>Pu</h2>
+            <p class="nombre-elemento">Plutonio</p>
+        </div>
+        <div class="elemento elemento-95 actinido" onclick="mostrarInfo(valor=95)">
+            <h2 class="numero-atomico" value=95>95</h2>
+            <h2>Am</h2>
+            <p class="nombre-elemento">Americio</p>
+        </div>
+        <div class="elemento elemento-96 actinido" onclick="mostrarInfo(valor=96)">
+            <h2 class="numero-atomico" value=96>96</h2>
+            <h2>Cm</h2>
+            <p class="nombre-elemento">Curio</p>
+        </div>
+        <div class="elemento elemento-97 actinido" onclick="mostrarInfo(valor=97)">
+            <h2 class="numero-atomico" value=97>97</h2>
+            <h2>Bk</h2>
+            <p class="nombre-elemento">Berkelio</p>
+        </div>
+        <div class="elemento elemento-98 actinido" onclick="mostrarInfo(valor=98)">
+            <h2 class="numero-atomico" value=98>98</h2>
+            <h2>Cf</h2>
+            <p class="nombre-elemento">Californio</p>
+        </div>
+        <div class="elemento elemento-99 actinido" onclick="mostrarInfo(valor=99)">
+            <h2 class="numero-atomico" value=99>99</h2>
+            <h2>Es</h2>
+            <p class="nombre-elemento">Einstenio</p>
+        </div>
+        <div class="elemento elemento-100 actinido" onclick="mostrarInfo(valor=100)">
+            <h2 class="numero-atomico" value=100>100</h2>
+            <h2>Fm</h2>
+            <p class="nombre-elemento">Fermio</p>
+        </div>
+        <div class="elemento elemento-101 actinido" onclick="mostrarInfo(valor=101)">
+            <h2 class="numero-atomico" value=101>101</h2>
+            <h2>Md</h2>
+            <p class="nombre-elemento">Mendelevio</p>
+        </div>
+        <div class="elemento elemento-102 actinido" onclick="mostrarInfo(valor=102)">
+            <h2 class="numero-atomico" value=102>102</h2>
+            <h2>No</h2>
+            <p class="nombre-elemento">Nobelio</p>
+        </div>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

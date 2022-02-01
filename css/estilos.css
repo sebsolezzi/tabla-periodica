@@ -1,0 +1,855 @@
+html {
+    font-size: 62.5%;
+}
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    position: relative;
+}
+
+:root {
+    --noMetales: #7024fd;
+    --halogenos: #ffb1f9;
+    --metalAlcalino: #fbe095;
+    --otrosMetales: #fafd54;
+    --metalTransicion: #fbfd84;
+    --alcaniloterreos: #fbc839;
+    --gasesNobles: #01bceb;
+    --metaloides: #2cff48;
+    --lantanos: #00b900;
+    --actinido: #04f304;
+}
+
+.no-metal {
+    background-color: var(--noMetales);
+}
+
+.metal-alcalino {
+    background-color: var(--metalAlcalino);
+}
+
+.alcalinoterreos {
+    background-color: var(--alcaniloterreos);
+}
+
+.gases-nobles {
+    background-color: var(--gasesNobles);
+}
+
+.metaloides {
+    background-color: var(--metaloides);
+}
+
+.halogenos {
+    background-color: var(--halogenos);
+}
+
+.otros-metales {
+    background-color: var(--otrosMetales);
+}
+
+.metalTransicion {
+    background-color: var(--metalTransicion);
+}
+
+.lantanos {
+    background-color: var(--lantanos);
+}
+
+.actinido {
+    background-color: var(--actinido);
+}
+
+.caja {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #00000080;
+    display: none;
+    z-index: 1;
+}
+
+/* info del elemeento */
+
+.info {
+    width: 30rem;
+    height: 25rem;
+    background-color: rgb(192, 227, 255);
+    position: fixed;
+    top: 20%;
+    left:10%;
+    border-radius: 20px;
+}
+
+.info-nombre {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 4rem;
+    text-align: center;
+}
+
+.simbolo {
+    font-size: 5rem;
+    margin-left: 1rem;
+    padding: 2.3rem 0;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.caja2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    height: 10.35rem;
+}
+
+.caja1 {
+    width: 30%;
+}
+
+.caja1, .caja2 {
+    background-color: cadetblue;
+}
+
+.caja2 p {
+    font-size: 1.3rem;
+    color: whitesmoke;
+    font-weight: bold;
+
+}
+
+.btn-cerrar {
+    display: block;
+    border-radius: 50%;
+    border-style: none;
+    cursor: pointer;
+    height: 5rem;
+    font-size: 3rem;
+    margin: 1rem auto;
+    width: 5rem;
+    transition: .3s ease-in-out;
+}
+
+.btn-cerrar:hover {
+    color: white;
+    background-color: black;
+}
+
+@media screen and (min-width:768px) {
+    .info {
+        margin-top: 3rem;
+        width: 60rem;
+        height: 25rem;
+        top: 20%;
+        left: 30%;
+        border-radius: 20px;
+    }
+    
+    .simbolo {
+        font-size: 8rem;
+        margin-left: 6rem;
+        padding: 0.6rem 0;   
+    }
+
+    .n-atomico {
+        margin-left: -16rem;
+    }
+    
+    .m-atomica {
+        margin-left: -11rem;
+    }
+    
+    .serie {
+        margin-left: -9rem;
+    }
+
+    .caja2 p {
+        font-size: 2rem;
+        color: whitesmoke;
+        font-weight: bold;
+    }
+    
+}
+
+/* fin de info del elemento ------------ */
+
+.h1 {
+    text-align: center;
+    font-size: 5rem;
+}
+
+.grid-container {
+    width: 90vw;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(18, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    overflow: scroll;
+    gap: .2rem .2rem;
+}
+.grid-latin {
+    display: grid;
+    grid-template-columns: repeat(14, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    width: 80vw;
+    padding: 0 1rem;
+    margin: auto auto;
+    overflow: scroll;
+    gap: .1rem .1rem;
+}
+
+@media screen and (min-width:768px) {
+    .grid-container {
+        overflow: visible;
+    }
+    .grid-latin {
+        overflow: visible;
+    }
+}
+
+.info-elementos{
+    grid-column: 4/7;
+    grid-row: 1/3;
+}
+.info-elementos2{
+    grid-column: 7/11;
+    grid-row: 1/3;
+}
+.no-metales{ color: var(--noMetales);}
+.metales-alcalinos{ color: var(--metalAlcalino);}
+.metales-alcalinoterreos{ color: var(--alcaniloterreos);}
+.metales-transicion{ color: var(--metalTransicion);}
+.metales-bloquep{ color: var(--otrosMetales);}
+.metaloidess{ color: var(--metaloides);}
+.halogenoss{ color: var(--halogenos);}
+.gasesnobles{ color: var(--gasesNobles);}
+.lantanidos{ color: var(--lantanos);}
+.actinidos{ color: var(--actinido);}
+
+.elemento {
+    width: 7rem;
+    height: 8rem;
+    border: 1px solid black;
+    padding: .5rem;
+    cursor: pointer;
+    transition: .3s ease;
+    box-shadow: 1px 1px 2px grey;
+}
+
+.elemento:hover {
+    transform: scale(130%);
+}
+
+.nombre-elemento {
+    text-align: center;
+    font-size: 1rem;
+    letter-spacing: 0.09rem;
+}
+
+.numero-atomico {
+    text-align: right;
+}
+
+.elemento-1 {
+    grid-column: 1/2;
+}
+
+.elemento-2 {
+    grid-column: 18/19;
+}
+
+.elemento-3 {
+    grid-row: 2/3;
+}
+
+.elemento-4 {
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+.elemento-5 {
+    grid-column: 13/14;
+    grid-row: 2/3;
+}
+
+.elemento-6 {
+    grid-column: 14/15;
+    grid-row: 2/3;
+}
+
+.elemento-7 {
+    grid-column: 15/16;
+    grid-row: 2/3;
+}
+
+.elemento-8 {
+    grid-column: 16/17;
+    grid-row: 2/3;
+}
+
+.elemento-9 {
+    grid-column: 17/18;
+    grid-row: 2/3;
+}
+
+.elemento-10 {
+    grid-column: 18/19;
+    grid-row: 2/3;
+}
+
+.elemento-11 {
+    grid-column: 1/2;
+    grid-row: 3/3;
+}
+
+.elemento-12 {
+    grid-column: 2/3;
+    grid-row: 3/3;
+}
+
+.elemento-13 {
+    grid-column: 13/14;
+    grid-row: 3/3;
+}
+
+.elemento-14 {
+    grid-column: 14/15;
+    grid-row: 3/3;
+}
+
+.elemento-15 {
+    grid-column: 15/16;
+    grid-row: 3/3;
+}
+
+.elemento-16 {
+    grid-column: 16/17;
+    grid-row: 3/3;
+}
+
+.elemento-17 {
+    grid-column: 17/18;
+    grid-row: 3/3;
+}
+
+.elemento-18 {
+    grid-column: 18/19;
+    grid-row: 3/3;
+}
+
+.elemento-19 {
+    grid-column: 1/2;
+    grid-row: 4/5;
+}
+
+.elemento-20 {
+    grid-column: 2/3;
+    grid-row: 4/5;
+}
+
+.elemento-21 {
+    grid-column: 3/4;
+    grid-row: 4/5;
+}
+
+.elemento-22 {
+    grid-column: 4/5;
+    grid-row: 4/5;
+}
+
+.elemento-23 {
+    grid-column: 5/6;
+    grid-row: 4/5;
+}
+
+.elemento-24 {
+    grid-column: 6/7;
+    grid-row: 4/5;
+}
+
+.elemento-25 {
+    grid-column: 7/8;
+    grid-row: 4/5;
+}
+
+.elemento-26 {
+    grid-column: 8/9;
+    grid-row: 4/5;
+}
+
+.elemento-27 {
+    grid-column: 9/10;
+    grid-row: 4/5;
+}
+
+.elemento-28 {
+    grid-column: 10/11;
+    grid-row: 4/5;
+}
+
+.elemento-29 {
+    grid-column: 11/12;
+    grid-row: 4/5;
+}
+
+.elemento-30 {
+    grid-column: 12/13;
+    grid-row: 4/5;
+}
+
+.elemento-31 {
+    grid-column: 13/14;
+    grid-row: 4/5;
+}
+
+.elemento-32 {
+    grid-column: 14/15;
+    grid-row: 4/5;
+}
+
+.elemento-33 {
+    grid-column: 15/16;
+    grid-row: 4/5;
+}
+
+.elemento-34 {
+    grid-column: 16/17;
+    grid-row: 4/5;
+}
+
+.elemento-35 {
+    grid-column: 17/18;
+    grid-row: 4/5;
+}
+
+.elemento-36 {
+    grid-column: 18/19;
+    grid-row: 4/5;
+}
+
+.elemento-37 {
+    grid-column: 1/2;
+    grid-row: 5/6;
+}
+
+.elemento-38 {
+    grid-column: 2/3;
+    grid-row: 5/6;
+}
+
+.elemento-39 {
+    grid-column: 3/4;
+    grid-row: 5/6;
+}
+
+.elemento-40 {
+    grid-column: 4/5;
+    grid-row: 5/6;
+}
+
+.elemento-41 {
+    grid-column: 5/6;
+    grid-row: 5/6;
+}
+
+.elemento-42 {
+    grid-column: 6/7;
+    grid-row: 5/6;
+}
+
+.elemento-43 {
+    grid-column: 7/8;
+    grid-row: 5/6;
+}
+
+.elemento-44 {
+    grid-column: 8/9;
+    grid-row: 5/6;
+}
+
+.elemento-45 {
+    grid-column: 9/10;
+    grid-row: 5/6;
+}
+
+.elemento-46 {
+    grid-column: 10/11;
+    grid-row: 5/6;
+}
+
+.elemento-47 {
+    grid-column: 11/12;
+    grid-row: 5/6;
+}
+
+.elemento-48 {
+    grid-column: 12/13;
+    grid-row: 5/6;
+}
+
+.elemento-49 {
+    grid-column: 13/14;
+    grid-row: 5/6;
+}
+
+.elemento-50 {
+    grid-column: 14/15;
+    grid-row: 5/6;
+}
+
+.elemento-51 {
+    grid-column: 15/16;
+    grid-row: 5/6;
+}
+
+.elemento-52 {
+    grid-column: 16/17;
+    grid-row: 5/6;
+}
+
+.elemento-53 {
+    grid-column: 17/18;
+    grid-row: 5/6;
+}
+
+.elemento-54 {
+    grid-column: 18/19;
+    grid-row: 5/6;
+}
+
+.elemento-55 {
+    grid-column: 1/2;
+    grid-row: 6/7;
+}
+
+.elemento-56 {
+    grid-column: 2/3;
+    grid-row: 6/7;
+}
+
+.elemento-71 {
+    grid-column: 3/4;
+    grid-row: 6/7;
+}
+
+.elemento-72 {
+    grid-column: 4/5;
+    grid-row: 6/7;
+}
+
+.elemento-73 {
+    grid-column: 5/6;
+    grid-row: 6/7;
+}
+
+.elemento-74 {
+    grid-column: 6/7;
+    grid-row: 6/7;
+}
+
+.elemento-75 {
+    grid-column: 7/8;
+    grid-row: 6/7;
+}
+
+.elemento-76 {
+    grid-column: 8/9;
+    grid-row: 6/7;
+}
+
+.elemento-77 {
+    grid-column: 9/10;
+    grid-row: 6/7;
+}
+
+.elemento-78 {
+    grid-column: 10/11;
+    grid-row: 6/7;
+}
+
+.elemento-79 {
+    grid-column: 11/12;
+    grid-row: 6/7;
+}
+
+.elemento-80 {
+    grid-column: 12/13;
+    grid-row: 6/7;
+}
+
+.elemento-81 {
+    grid-column: 13/14;
+    grid-row: 6/7;
+}
+
+.elemento-82 {
+    grid-column: 14/15;
+    grid-row: 6/7;
+}
+
+.elemento-83 {
+    grid-column: 15/16;
+    grid-row: 6/7;
+}
+
+.elemento-84 {
+    grid-column: 16/17;
+    grid-row: 6/7;
+}
+
+.elemento-85 {
+    grid-column: 17/18;
+    grid-row: 6/7;
+}
+
+.elemento-86 {
+    grid-column: 18/19;
+    grid-row: 6/7;
+}
+
+.elemento-87 {
+    grid-column: 1/2;
+    grid-row: 7/8;
+}
+
+.elemento-88 {
+    grid-column: 2/3;
+    grid-row: 7/8;
+}
+
+.elemento-103 {
+    grid-column: 3/4;
+    grid-row: 7/8;
+}
+
+.elemento-104 {
+    grid-column: 4/5;
+    grid-row: 7/8;
+}
+
+.elemento-105 {
+    grid-column: 5/6;
+    grid-row: 7/8;
+}
+
+.elemento-106 {
+    grid-column: 6/7;
+    grid-row: 7/8;
+}
+
+.elemento-107 {
+    grid-column: 7/8;
+    grid-row: 7/8;
+}
+
+.elemento-108 {
+    grid-column: 8/9;
+    grid-row: 7/8;
+}
+
+.elemento-109 {
+    grid-column: 9/10;
+    grid-row: 7/8;
+}
+
+.elemento-110 {
+    grid-column: 10/11;
+    grid-row: 7/8;
+}
+
+.elemento-111 {
+    grid-column: 11/12;
+    grid-row: 7/8;
+}
+
+.elemento-112 {
+    grid-column: 12/13;
+    grid-row: 7/8;
+}
+
+.elemento-113 {
+    grid-column: 13/14;
+    grid-row: 7/8;
+}
+
+.elemento-114 {
+    grid-column: 14/15;
+    grid-row: 7/8;
+}
+
+.elemento-115 {
+    grid-column: 15/16;
+    grid-row: 7/8;
+}
+
+.elemento-116 {
+    grid-column: 16/17;
+    grid-row: 7/8;
+}
+
+.elemento-117 {
+    grid-column: 17/18;
+    grid-row: 7/8;
+}
+
+.elemento-118 {
+    grid-column: 18/19;
+    grid-row: 7/8;
+}
+
+.elemento-57 {
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+.elemento-58 {
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+
+.elemento-59 {
+    grid-column: 3/4;
+    grid-row: 1/2;
+}
+
+.elemento-60 {
+    grid-column: 4/5;
+    grid-row: 1/2;
+}
+
+.elemento-61 {
+    grid-column: 5/6;
+    grid-row: 1/2;
+}
+
+.elemento-62 {
+    grid-column: 6/7;
+    grid-row: 1/2;
+}
+
+.elemento-63 {
+    grid-column: 7/8;
+    grid-row: 1/2;
+}
+
+.elemento-64 {
+    grid-column: 8/9;
+    grid-row: 1/2;
+}
+
+.elemento-65 {
+    grid-column: 9/10;
+    grid-row: 1/2;
+}
+
+.elemento-66 {
+    grid-column: 10/11;
+    grid-row: 1/2;
+}
+
+.elemento-67 {
+    grid-column: 11/12;
+    grid-row: 1/2;
+}
+
+.elemento-68 {
+    grid-column: 12/13;
+    grid-row: 1/2;
+}
+
+.elemento-69 {
+    grid-column: 13/14;
+    grid-row: 1/2;
+}
+
+.elemento-70 {
+    grid-column: 14/15;
+    grid-row: 1/2;
+}
+
+.elemento-89 {
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+.elemento-90 {
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+.elemento-91 {
+    grid-column: 3/4;
+    grid-row: 2/3;
+}
+
+.elemento-92 {
+    grid-column: 4/5;
+    grid-row: 2/3;
+}
+
+.elemento-93 {
+    grid-column: 5/6;
+    grid-row: 2/3;
+}
+
+.elemento-94 {
+    grid-column: 6/7;
+    grid-row: 2/3;
+}
+
+.elemento-95 {
+    grid-column: 7/8;
+    grid-row: 2/3;
+}
+
+.elemento-96 {
+    grid-column: 8/9;
+    grid-row: 2/3;
+}
+
+.elemento-97 {
+    grid-column: 9/10;
+    grid-row: 2/3;
+}
+
+.elemento-98 {
+    grid-column: 10/11;
+    grid-row: 2/3;
+}
+
+.elemento-99 {
+    grid-column: 11/12;
+    grid-row: 2/3;
+}
+
+.elemento-100 {
+    grid-column: 12/13;
+    grid-row: 2/3;
+}
+
+.elemento-101 {
+    grid-column: 13/14;
+    grid-row: 2/3;
+}
+
+.elemento-102 {
+    grid-column: 14/15;
+    grid-row: 2/3;
+}
